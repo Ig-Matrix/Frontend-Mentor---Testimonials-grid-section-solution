@@ -143,7 +143,6 @@ blockquote {
 @media screen and (min-width: 1200px) {
     main {
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr 0.5fr;
         grid-template-areas:
             "box1 box1 box2 box5"
             "box3 box4 box4 box5";
