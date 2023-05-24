@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,500;1,600&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 100vw;
+    min-height: 100vh;
+    background-color: hsl(210, 46%, 95%);
+    display: grid;
+    place-items: center;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+main {
+    width: 80%;
+    gap: 1rem;
+    color: hsl(0, 0%, 100%);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "box1"
+    "box2"
+    "box3"
+    "box4"
+    "box5";
+    grid-template-rows: 1fr .6fr .6fr .8fr 1fr;
+}
+
+.box {
+    padding: 2rem ;
+    border-radius: 8px;
+}
+
+.avatar {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+figure {
+    width: 40px;
+}
+
+img {
+    width: 100%;
+    border: 2px solid hsl(0, 0%, 81%);
+    border-radius: 50%;
+}
+
+.name h4 {
+    opacity: 0.9;
+    letter-spacing: 0.9px;
+}
+
+.name p {
+    opacity: 0.5;
+}
+
+h2 {
+    margin: 1rem 0;
+    padding-right: 0.3rem;
+    letter-spacing: 1.px;
+}
+
+blockquote {
+    opacity: 0.7;
+}
+
+.box1 {
+    grid-area: box1;
+    background: url(./images/bg-pattern-quotation.svg) no-repeat;
+    background-position: 90% 0;    
+    background-color: hsl(263, 55%, 52%);
+}
+
+.box2 {
+    background-color: hsl(217, 19%, 35%);
+    grid-area: box2;
+}
+.box3 {
+    background-color: #fff;
+    grid-area: box3;
+}
+
+.box3 h2 {
+    padding-right: 1rem;
+}
+.box4 {
+    background-color: hsl(219, 29%, 14%);
+    grid-area: box4;
+    padding-bottom: 1rem;
+}
+.box5 {
+    background-color: #fff;
+    grid-area: box5;
+}
+
+.box5 blockquote {
+    padding-right: 0.6rem;
+}
+
+.box3,
+.box5 {
+    color: hsl(219, 29%, 14%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 0.5fr;
+        grid-template-areas:
+            "box1 box1 box2 box5"
+            "box3 box4 box4 box5";
+    }
+
+    .box {
+        padding: 2rem;
+    }
+
+    .box1 {
+        background-position: 80% 0;
+    }
+    
+    .box3, .box4, .box5{
+        padding: 2rem 2rem 1.2rem;
+    }
+
+
+}
