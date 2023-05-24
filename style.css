@@ -123,7 +123,7 @@ blockquote {
 @media screen and (min-width: 768px) and (max-width: 1200px) {
     main {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: auto;
         grid-template-areas:
             "box1 box1"
             "box2 box3"
