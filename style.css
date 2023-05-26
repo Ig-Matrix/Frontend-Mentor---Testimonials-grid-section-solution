@@ -18,7 +18,7 @@
 
 main {
     height: 95%;
-    width: 80%;
+    width: 90%;
     gap: 1rem;
     color: hsl(0, 0%, 100%);
     display: grid;
@@ -29,7 +29,7 @@ main {
     "box3"
     "box4"
     "box5";
-    grid-template-rows: 1fr .6fr .6fr .8fr 1fr;
+    grid-template-rows: auto;
 }
 
 .box {
@@ -65,7 +65,6 @@ img {
 h2 {
     margin: 1rem 0;
     padding-right: 0.3rem;
-    letter-spacing: 1.px;
 }
 
 blockquote {
@@ -99,10 +98,11 @@ blockquote {
 .box5 {
     background-color: #fff;
     grid-area: box5;
+    padding-bottom: 0;
 }
 
 .box5 blockquote {
-    padding-right: 0.6rem;
+    padding-right: 0.3rem;
 }
 
 .box3,
@@ -114,6 +114,7 @@ blockquote {
     padding: 1rem;
     font-size: 11px;
     text-align: center;
+    margin-top: 2rem;
 }
 
 .attribution a {
@@ -140,8 +141,9 @@ blockquote {
 }
 
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1201px) {
     main {
+        width: 80%;
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas:
             "box1 box1 box2 box5"
@@ -159,6 +161,4 @@ blockquote {
     .box3, .box4, .box5{
         padding: 2rem 2rem 1.2rem;
     }
-
-
 }
